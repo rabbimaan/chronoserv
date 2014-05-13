@@ -6,12 +6,13 @@ var chrono = require('./lib/chrono').createServer();
 
 debug('startup.');
 
-chrono.setup();
-chrono.start(function(err) {
-    if (err) {
-        debug('failed to start listener.');    
-    } else {
-        debug('up and running.');
-    }
-});
+chrono
+    .setup()
+    .start(function(err) {
+        if (err) {
+            debug('failed to start listener.');    
+        } else {
+            debug('up and running.');
+        }
+    });
 
