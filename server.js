@@ -8,7 +8,7 @@ console.log('startup.');
 var jimmy = function (data) {
     console.log('got laptime data:');
     console.log(data);
-}
+};
 
 chrono
     .setup(jimmy)
