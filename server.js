@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
-var debug = require('debug')('server');
 var chrono = require('./lib/chrono').createServer();
 
 
-debug('startup.');
+console.log('startup.');
 
 var jimmy = function (data) {
     console.log('got laptime data:');
@@ -15,9 +14,7 @@ chrono
     .setup(jimmy)
     .start(function(err) {
         if (err) {
-            debug('failed to start listener.');    
-        } else {
-            debug('up and running.');
+            console.log('failed to start listener.');
         }
     });
 
